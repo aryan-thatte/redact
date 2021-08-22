@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "redact helps you control your content",
-  "icons": {
-  },
+  "icons": {},
   "default_locale": "en",
   "background": {
     "page": "src/bg/background.html",
     "persistent": true
   },
+  "permissions": [
+    "storage"
+  ],
   "options_page": "src/options_custom/index.html",
   "page_action": {
     "default_title": "redact",
@@ -17,7 +19,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "<all_urls>"
+      ],
       "css": [
         "src/inject/inject.css"
       ]

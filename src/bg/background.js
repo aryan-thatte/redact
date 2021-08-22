@@ -6,8 +6,10 @@
 
 
 //example of using a message handler from the inject scripts
-chrome.extension.onMessage.addListener(
-  function(request, sender, sendResponse) {
-  	chrome.pageAction.show(sender.tab.id);
-    sendResponse();
-  });
+chrome.runtime.onInstalled.addListener(() => {
+
+  chrome.storage.sync.set({ color });
+
+  console.log('Trynna control yr content right about now lol');
+
+});
