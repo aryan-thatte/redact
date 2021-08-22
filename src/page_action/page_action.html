@@ -1,17 +1,36 @@
-<!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
+<!DOCTYPE html>
+<html>
 
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/page_action/page_action.html. The CSS is there, too.</p>
-</div>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <title>redact</title>
+    </head>
+    <style type="text/css">
+    body {
+    margin: 10px;
+    color: white;
+    background-color: #4b525c;
+    }
+    h1 {
+        color: white;
+    }
+    h3 {
+        color: white;
+    }   
+    input {
+        color: #4b525c;
+    }
+    </style>
+    <body>
+        <h1>redact</h1>
+        <h3>add keyword</h3>
+        <input text="text" id="keyword"/> 
+        <button type="button" class="btn btn-outline-light">add</button>
+        <br><body>delete content</body>
+        <input type="radio" id="delete_content" name="delete_hide"><br>
+        <body>cover content</body>
+        <input type="radio" id="cover_content" name="delete_hide">
+        <h3>muted words: <span id="words"></span></h3>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    </body>
+</html>
